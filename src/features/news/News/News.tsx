@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { INews } from "../../../firebase/endpoints";
-import { changeDate, removeNewsHandler, replaceNews } from "../newsSlice";
+import { changeDate, changeTitle, removeNewsHandler, replaceNews } from "../newsSlice";
 import { useDispatch } from "react-redux";
 import { withAuth } from "../../../firebase/withAuth";
+import { EditField } from "./EditField/EditField";
 
 interface IButtonStyleProps {
   top: string;
@@ -37,6 +38,7 @@ const NewsTitle = styled.h2`
   font-size: 14px;
   color: #000;
   text-align: center;
+  cursor: default;
 `;
 
 const ControlButton = styled.button<IButtonStyleProps>`
@@ -69,6 +71,7 @@ const ControlButton = styled.button<IButtonStyleProps>`
   }
 `;
 
+
 type Props = {
   isLeft: boolean;
   isRight: boolean;
@@ -77,6 +80,9 @@ type Props = {
 
 export const News = withAuth(({ date, img, link, title, id, isLeft, isRight, isAuth }: Props) => {
   const dispatch = useDispatch();
+  const [ isEditingTitle, setEditTitle ] = useState(false);
+  const [ value, setValue ] = useState('');
+
 
   const getArrWithDateAndId = (firstElement: HTMLElement, secondElement: HTMLElement) => {
     const newsOne = {
@@ -131,8 +137,26 @@ export const News = withAuth(({ date, img, link, title, id, isLeft, isRight, isA
       <ControlButton onClick={ moveRighter } top="50px" right="0" disabled={ !isAuth }>R</ControlButton> }
       <Link target="_blank" href={ link }>
         <NewsImage src={ img } alt={ title } />
-        <NewsTitle>{ title }</NewsTitle>
       </Link>
+      { !isEditingTitle && <NewsTitle
+        onDoubleClick={ (event) => {
+          setEditTitle(!isEditingTitle);
+          setValue(event.currentTarget.textContent);
+        } }
+      >
+        { title }
+      </NewsTitle> }
+      { isEditingTitle && <EditField
+        value={ value }
+        onChange={ (event) => setValue(event.target.value) }
+        onCLick={ () => {
+          dispatch(changeTitle(id, value));
+          setEditTitle(!isEditingTitle);
+        } }
+        cancelHandler={ () => {
+          setEditTitle(!isEditingTitle);
+        } }
+      /> }
     </NewsStyled>
   );
 });

@@ -13,7 +13,6 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    console.log('hell')
     dispatch(checkUserAuthorize());
   }, [ dispatch ]);
 

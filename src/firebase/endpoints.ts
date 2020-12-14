@@ -53,6 +53,19 @@ export const updateDateOnServer = async (id: string, newDate: number) => {
   });
 };
 
+export const updateTitleOnServer = async (id: string, title: string) => {
+  const ref = await db.collection(DOCUMENT_NAME).doc(id);
+
+  return db.runTransaction(function (transaction) {
+    return transaction.get(ref).then(function (sfDoc) {
+      if (!sfDoc.exists) {
+        throw "Document does not exist!";
+      }
+      transaction.update(ref, { title });
+    });
+  });
+};
+
 export const authorize = async ({ email, password }: IAuthValues) => {
   await firebase.auth().signInWithEmailAndPassword(email, password);
 };

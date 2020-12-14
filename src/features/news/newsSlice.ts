@@ -5,7 +5,7 @@ import {
   loadNews,
   loadSingleNewsAndGetId,
   removeNewsFromServer,
-  updateDateOnServer,
+  updateDateOnServer, updateTitleOnServer,
 } from "../../firebase/endpoints";
 import {
   formStartPending,
@@ -78,6 +78,20 @@ const news = createSlice({
       console.log(news);
       state.list = news;
     },
+    changeNewsTitle(state, { payload }) {
+      const { id, title } = payload;
+
+      state.list = state.list.map(news => {
+        if (id === news.id) {
+          return {
+            ...news,
+            title,
+          };
+        }
+
+        return news;
+      });
+    },
   },
 });
 
@@ -89,6 +103,7 @@ export const {
   addNews,
   removeNews,
   replaceNews,
+  changeNewsTitle
 } = news.actions;
 
 export const fetchNewsList = (): AppThunk => async dispatch => {
@@ -146,6 +161,16 @@ export const changeDate = ([ newsOne, newsTwo ]: { id: string, date: number }[])
     await updateDateOnServer(newsOne.id, newsTwo.date);
     await updateDateOnServer(newsTwo.id, newsOne.date);
     dispatch(replaceNews({ dateOne: newsOne.date, dateTwo: newsTwo.date }));
+  } catch (err) {
+    console.error(err);
+  }
+};
+
+
+export const changeTitle = (id: string, title: string): AppThunk => async dispatch => {
+  try {
+    await updateTitleOnServer(id, title);
+    dispatch(changeNewsTitle({id, title}));
   } catch (err) {
     console.error(err);
   }
