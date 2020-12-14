@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/adminka-for-museum.github.io/static/css/main.2ae47eeb.chunk.css",
+    "main.js": "/adminka-for-museum.github.io/static/js/main.a0ac654e.chunk.js",
+    "main.js.map": "/adminka-for-museum.github.io/static/js/main.a0ac654e.chunk.js.map",
+    "runtime-main.js": "/adminka-for-museum.github.io/static/js/runtime-main.0cc0935a.js",
+    "runtime-main.js.map": "/adminka-for-museum.github.io/static/js/runtime-main.0cc0935a.js.map",
+    "static/js/2.2b9ec586.chunk.js": "/adminka-for-museum.github.io/static/js/2.2b9ec586.chunk.js",
+    "static/js/2.2b9ec586.chunk.js.map": "/adminka-for-museum.github.io/static/js/2.2b9ec586.chunk.js.map",
+    "index.html": "/adminka-for-museum.github.io/index.html",
+    "static/css/main.2ae47eeb.chunk.css.map": "/adminka-for-museum.github.io/static/css/main.2ae47eeb.chunk.css.map",
+    "static/js/2.2b9ec586.chunk.js.LICENSE.txt": "/adminka-for-museum.github.io/static/js/2.2b9ec586.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0cc0935a.js",
+    "static/js/2.2b9ec586.chunk.js",
+    "static/css/main.2ae47eeb.chunk.css",
+    "static/js/main.a0ac654e.chunk.js"
+  ]
+}
