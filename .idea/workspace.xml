@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3337a5c9-37d7-45e5-886c-0d0d1f7d69df" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/features/news/News/EditField/EditField.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/news/News/News.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/news/News/News.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/news/newsSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/news/newsSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/firebase/endpoints.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/firebase/endpoints.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +88,7 @@
       <workItem from="1607885709275" duration="19444000" />
       <workItem from="1607906421487" duration="678000" />
       <workItem from="1607941611678" duration="12157000" />
-      <workItem from="1607957266562" duration="4638000" />
+      <workItem from="1607957266562" duration="5034000" />
     </task>
     <servers />
   </component>

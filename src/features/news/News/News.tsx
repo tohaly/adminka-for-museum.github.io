@@ -140,6 +140,9 @@ export const News = withAuth(({ date, img, link, title, id, isLeft, isRight, isA
       </Link>
       { !isEditingTitle && <NewsTitle
         onDoubleClick={ (event) => {
+          if(!isAuth){
+            return
+          }
           setEditTitle(!isEditingTitle);
           setValue(event.currentTarget.textContent);
         } }
