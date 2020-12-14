@@ -126,9 +126,9 @@ export const News = withAuth(({ date, img, link, title, id, isLeft, isRight, isA
     <NewsStyled data-id={ id } data-date={ date }>
       <ControlButton onClick={ removeHandler } top="0" right="0" disabled={ !isAuth }>X</ControlButton>
       { !isLeft &&
-      <ControlButton onClick={ moveLefter } top="50px" left="0" disabled={ !isAuth }>{ '<' }</ControlButton> }
+      <ControlButton onClick={ moveLefter } top="50px" left="0" disabled={ !isAuth }>L</ControlButton> }
       { !isRight &&
-      <ControlButton onClick={ moveRighter } top="50px" right="0" disabled={ !isAuth }>{ '>' }</ControlButton> }
+      <ControlButton onClick={ moveRighter } top="50px" right="0" disabled={ !isAuth }>R</ControlButton> }
       <Link target="_blank" href={ link }>
         <NewsImage src={ img } alt={ title } />
         <NewsTitle>{ title }</NewsTitle>

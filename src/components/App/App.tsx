@@ -6,9 +6,16 @@ import { Switch, Route } from 'react-router-dom';
 import { NotFound } from '../NotFound/NotFound';
 import { fetchNewsList } from "../../features/news/newsSlice";
 import { useDispatch } from "react-redux";
+import { Main } from "../Main/Main";
+import { checkUserAuthorize } from "../../features/auth/authSlice";
 
 function App() {
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    console.log('hell')
+    dispatch(checkUserAuthorize());
+  }, [ dispatch ]);
 
   useEffect(() => {
     dispatch(fetchNewsList());
@@ -18,6 +25,7 @@ function App() {
     <div className="App">
       <Header />
       <Switch>
+        <Route exact path='/' component={ Main } />
         <Route path='/add' component={ AddNews } />
         <Route path='/list' component={ NewsList } />
         <Route component={ NotFound } />
