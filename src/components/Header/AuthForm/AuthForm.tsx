@@ -77,9 +77,12 @@ const Button = styled.button`
 
 const AuthFormStyled = styled.form`
   display: flex;
+  align-items: flex-start;
+  justify-content: center;
 
   @media screen and (max-width: 700px) {
     flex-direction: column;
+    align-items: center;
   }
 `;
 

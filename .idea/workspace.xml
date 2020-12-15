@@ -6,9 +6,6 @@
       <change beforePath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/AuthForm/AuthForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/AuthForm/AuthForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Title/Title.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Title/Title.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/news/NewsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/news/NewsList.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +91,7 @@
       <workItem from="1607906421487" duration="678000" />
       <workItem from="1607941611678" duration="12157000" />
       <workItem from="1607957266562" duration="5694000" />
-      <workItem from="1608032618462" duration="686000" />
+      <workItem from="1608032618462" duration="1208000" />
     </task>
     <servers />
   </component>
