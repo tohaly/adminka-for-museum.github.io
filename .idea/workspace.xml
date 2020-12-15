@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3337a5c9-37d7-45e5-886c-0d0d1f7d69df" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/news/News/News.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/news/News/News.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/AuthForm/AuthForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/AuthForm/AuthForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Title/Title.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Title/Title.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/news/NewsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/news/NewsList.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +93,8 @@
       <workItem from="1607885709275" duration="19444000" />
       <workItem from="1607906421487" duration="678000" />
       <workItem from="1607941611678" duration="12157000" />
-      <workItem from="1607957266562" duration="5034000" />
+      <workItem from="1607957266562" duration="5694000" />
+      <workItem from="1608032618462" duration="686000" />
     </task>
     <servers />
   </component>

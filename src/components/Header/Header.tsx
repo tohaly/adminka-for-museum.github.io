@@ -53,6 +53,10 @@ const StyledLink = styled(NavLink)`
       border-bottom: 2px solid #ae86ee;
     }
   }
+
+  @media screen and (max-width: 700px){
+   margin: 0 0 16px;
+  }
 `;
 
 const StyledLinkBlank = styled.a`
@@ -65,6 +69,10 @@ const StyledLinkBlank = styled.a`
 
   :hover {
     text-decoration: underline;
+  }
+
+  @media screen and (max-width: 700px){
+    margin: 0 0 16px;
   }
 `;
 
@@ -90,6 +98,11 @@ const NavigateBar = styled.nav`
   margin-bottom: 16px;
   display: flex;
   justify-content: center;
+
+  @media screen and (max-width: 700px){
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const Header = withAuth(({ isAuth }) => {
@@ -101,10 +114,15 @@ export const Header = withAuth(({ isAuth }) => {
       <NavigateBar>
         <StyledLink to='/list'>Управялть новостями</StyledLink>
         <StyledLink to='/add'>Добавить новость</StyledLink>
-        <StyledLinkBlank href="http://xn--b1adccgnpd5cn4a0j.xn--p1ai/" rel="noreferrer" target="_blank">Перейти на сайт
-          акции</StyledLinkBlank>
-        { !isAuth && <AuthButton onClick={ () => dispatch(toggleForm()) }>Авторизация</AuthButton> }
-        { isAuth && <AuthButton onClick={ () => dispatch(logoutUser()) }>Выйти</AuthButton> }
+        <StyledLinkBlank href="http://xn--b1adccgnpd5cn4a0j.xn--p1ai/" rel="noreferrer" target="_blank">
+          Перейти на сайт акции
+        </StyledLinkBlank>
+        { !isAuth && <AuthButton onClick={ () => dispatch(toggleForm()) }>
+          Авторизация
+        </AuthButton> }
+        { isAuth && <AuthButton onClick={ () => dispatch(logoutUser()) }>
+          Выйти
+        </AuthButton> }
       </NavigateBar>
       { formIsVisible && <AuthForm /> }
     </HeaderStyled>

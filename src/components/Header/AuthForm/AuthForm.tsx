@@ -75,6 +75,14 @@ const Button = styled.button`
   font-weight: bold;
 `;
 
+const AuthFormStyled = styled.form`
+  display: flex;
+
+  @media screen and (max-width: 700px) {
+    flex-direction: column;
+  }
+`;
+
 export const AuthForm = () => {
   const [ values, setValues ] = useState({ email: '', password: '' });
   const pending = useSelector(selectPendingAuth);
@@ -96,7 +104,7 @@ export const AuthForm = () => {
   }
 
   return (
-    <form onSubmit={ submitHandler }>
+    <AuthFormStyled onSubmit={ submitHandler }>
       <Input
         name="email"
         value={ values.email }
@@ -116,6 +124,6 @@ export const AuthForm = () => {
         required
       />
       <Button type="submit">Войти</Button>
-    </form>
+    </AuthFormStyled>
   );
 };

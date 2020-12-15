@@ -13,6 +13,10 @@ const List = styled.ul`
   grid-template-columns: repeat(auto-fill, 150px);
   grid-gap: 8px;
   justify-content: center;
+
+  @media screen and (max-width: 700px){
+    padding: 0 16px;
+  }
 `;
 
 export const NewsList = memo(() => {

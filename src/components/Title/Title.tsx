@@ -15,8 +15,9 @@ const Info = styled.h2`
   font-size: 14px;
   text-align: center;
   font-weight: 400;
-  margin: 0 0 40px;
+  margin: 0 auto 40px;
   color: #ccc;
+  max-width: 250px;
 `;
 
 export const Title = withAuth(({ text, isAuth }: IProps & { isAuth: boolean }) => {
